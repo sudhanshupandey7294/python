@@ -1,4 +1,4 @@
-"""
+'''
 Tuple:- Tuple is a collection of hetregenous elements
 Syntax:-
 t = (23,45,89,74,15,34)
@@ -7,7 +7,7 @@ t = (23,45,89,74,15,34)
 t = (45,52.46,'A',True,'Aman',2+8j)
 t = ()
 t = tuple()
-t = tuple([23,45,56,78,943])
+t = tuple([23,45,56,78,943]) # we can put a List inside round bracket of tuple which will further behave like tuple 
 t = tuple((634,46,63,52,24))
 print(t)
 print(type(t))
@@ -78,9 +78,9 @@ print(type(s))
 
 
 s = {34,56,77,45,897,65,42}
-print( s )  # print elements on random positions
+print( s )  # print elements on random positions... sets print the elements randomly not specifuc position
 
 s = {21,34,34,45,54,23,32,4,23,23,23,45,45}
-print(s) # remove duplicate elements
+print(s) #  set contain unique elements but suppose if you provide duplicate reoccuring items in it then it will remove duplicate elements and in backend they will moved to HASH 
 
-"""
+'''
