@@ -88,7 +88,7 @@ Intermediate Level
 15. Write a program to count frequency of each element in a list. 
 16. Write a program to replace all negative numbers with zero in a list. 
 
-  '''
+
 #9. Write a program to merge two lists and remove duplicates. 
 L1=[1,3,2,5,6,4,8,9,15]
 L2=[10,11,13,12,14]
@@ -153,4 +153,66 @@ for i in range(len(li)):
         li[i] = 0  # Replace negative number with 0
 
 print(li)
+
+Advanced Level 
+17. Write a program to remove all occurrences of a given element from a list. 
+18. Write a program to check if a list is a palindrome. 
+19. Write a Python program to find missing numbers in a given list of consecutive integers. 
+20. Write a program to perform element-wise addition of two lists. 
+21. Write a Python program to find the longest increasing subsequence in a list. 
+22. Write a program to group elements based on frequency. 
+  '''
+#17. Write a program to remove all occurrences of a given element from a list.
+
+def remove_occurrence(input_list, target):
+    for i in input_list:
+        if i==target:
+            input_list.remove(target)
+    return input_list
+
+input_list=[1,2,3,4,5,2,4,2,5,2]
+target=2
+
+print(remove_occurrence(input_list, target))
+
+#Or________________
+li=[1,2,3,4,20,30,20]
+target=20
+for i in li:
+    if i==target:
+        li.remove(target)
+print(li)        
+
+#18. Write a program to check if a list is a palindrome. 
+
+li = [1, 2, 3, 2, 1]
+reversed_list = list(reversed(li))
+if li == reversed_list:
+    print("The list is a palindrome.")
+else:
+    print("The list is NOT a palindrome.")
+
+#19. Write a Python program to find missing numbers in a given list of consecutive integers.
+li =[1,2,4,5,7,9,10]
+lowest = min(li)
+highest = max(li)
+
+missing = []
+for i in range(lowest, highest + 1):
+    if i not in li:
+        missing.append(i)
+print("Missing numbers:", missing)
+
+#20. Write a program to perform element-wise addition of two lists.
+l1=[1,2,3,4,5]
+l2=[6,7,8,9,10]
+result=[]
+
+for i in range(len(l1)):
+    total=l1[i]+l2[i]
+    result.append(total)
+print("Sum of lists: ", result)    
+
+#21. Write a Python program to find the longest increasing subsequence in a list. 
+#22. Write a program to group elements based on frequency. 
 
