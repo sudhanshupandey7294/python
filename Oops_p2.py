@@ -155,7 +155,7 @@ obj = myclass()
 print( obj.add(10,20) )           # Addition
 print( obj.add("Aman","Kumar") )  # Concatenation
 print( obj.add([1,2,3],[4,5,6]) ) # Extend
-
+ # ie one fxn add()  is working different form ie has many form,,  overloading means same function name with different parameter 
 
 FUNCTION OVERRIDING
 
@@ -169,6 +169,37 @@ class classB(classA):
 obj = classB()
 obj.function()
 
+# when classes has same function with same parameter but child  has access to inherit the parent property.
 # classB's Object will access its property not its Parent property
 
 """
+
+class Parent:
+    def greet(self):
+        print("Hello from the Parent class!")
+
+class Child(Parent):
+    # Method Overriding: Same name, same parameters, DIFFERENT behavior
+    def greet(self):
+        print("Hello from the Child class!")
+
+# Creating instances
+parent_obj = Parent()
+child_obj = Child()
+
+parent_obj.greet()  # Output: Hello from the Parent class!
+child_obj.greet()   # Output: Hello from the Child class!
+
+
+# we can also call parent class method using child class object because child inherit the parent .....> "class Child(Parent)" as you can see <....  sothis is overriding
+
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+class Child(Parent):
+    pass  # No method here
+
+obj = Child()
+obj.greet()  # Output: Hello from Parent
+

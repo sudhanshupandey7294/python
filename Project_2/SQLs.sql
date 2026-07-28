@@ -1,0 +1,8 @@
+CREATE DATABASE infosys;
+USE infosys;
+CREATE TABLE employee(
+eid INT PRIMARY KEY AUTO_INCREMENT,
+ename VARCHAR(30) NOT NULL,
+eadd VARCHAR(100) NOT NULL,
+esal DECIMAL(8,2) NOT NULL);
+Select * From employee;
